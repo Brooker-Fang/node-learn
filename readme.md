@@ -47,3 +47,12 @@ module、exports: 处理模块的导出
       + 将读取到的内容通过JSON.parse进行解析，将结果返回给exports对象
 
 + 模块加载完成后，会使用路径作为索引进行缓存，下次直接从缓存取
+
+## Node中的事件循环
+有6中类型的任务
++ timers: 执行setTimeout与setInterval回调
++ pending callbacks：执行系统操作的回调，如tcp、udp
++ idle，prepare：只在系统内部进行使用
++ poll：执行与I/O相关的回调
++ check：执行setImmediate中的回调
++ close callbacks：执行close事件的回调
