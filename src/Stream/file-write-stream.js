@@ -22,10 +22,10 @@ ws.on('open', (fd) => {
   console.log('文件打开了')
 })
 
-ws.on('end', () => {
-  console.log('写操作完成')
-})
 ws.write(buf)
+ws.on('close', () => {
+  console.log('CLOSE')
+})
 ws.end('end111', () => {
   console.log('end')
 })
