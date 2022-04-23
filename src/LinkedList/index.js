@@ -89,8 +89,12 @@ class Queue{
   }
 }
 
-const q = new Queue()
-q.enQueue('1')
-q.enQueue('2')
-let a = q.deQueue()
-console.log(a)
+// const q = new Queue()
+// q.enQueue('1')
+// q.enQueue('2')
+// let a = q.deQueue()
+// console.log(a)
+
+module.exports = {
+  Queue
+} 
