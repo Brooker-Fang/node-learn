@@ -1,3 +1,7 @@
+/* 
+  pipe管道：其实是 可读流可写流 操作流的 语法糖
+*/
+
 const fs = require('fs')
 
 let rs = fs.createReadStream('test.txt', {
@@ -21,5 +25,5 @@ let ws = fs.createWriteStream('t1.txt', {
 //   rs.resume()
 // })
 
-// pipe已实现上面的操作
+// pipe即实现上面的操作语法糖
 rs.pipe(ws)
